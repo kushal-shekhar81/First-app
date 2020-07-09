@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { NavigationContainer, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Home from './Home';
-import Welcome from './Welcome';
+import SignIn from './screens/SignIn';
+import SignUp from './screens/Signup';
+
 
 const Stack = createStackNavigator();
 
@@ -11,13 +12,13 @@ export default class Main extends Component {
         return (
             
             <NavigationContainer theme={DarkTheme}>
-                <Stack.Navigator initialRouteName="Home">
+                <Stack.Navigator initialRouteName="Sign In">
                     <Stack.Screen 
-                        name="Home" 
-                        component={Home} 
+                        name="Sign In" 
+                        component={SignIn} 
                         options={{headerTitleAlign: "center"}} />
-                    <Stack.Screen name="Welcome" 
-                        component={Welcome} 
+                    <Stack.Screen name="Sign Up" 
+                        component={SignUp} 
                         options={{headerTitleAlign: "center"}} />
                 </Stack.Navigator>
             </NavigationContainer>
